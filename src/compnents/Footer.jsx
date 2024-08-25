@@ -1,3 +1,5 @@
+import { AiFillLinkedin } from "react-icons/ai"; 
+import { BsGithub } from "react-icons/bs"; 
 import React from 'react';
 import Select from 'react-select';
 import { useTheme } from '../Context/ThemeContext';
@@ -27,13 +29,13 @@ const Footer = () => {
 
       <div className="actual-footer">
         <div className="links">
-          {/* <a href='https://github.com/utkarsh-dubey' target="_blank">
-          <GitHubIcon style={{marginRight:'4px'}}/>
+          <a href='https://github.com/dilawarjahangir' target="_blank">
+         <BsGithub size={30} style={{marginRight:"5px"}}  />
           </a>
-          <a href='https://www.linkedin.com/in/utkarsh2504/' target="_blank">
-          <LinkedInIcon/>
+          <a href='https://www.linkedin.com/in/dilawar-jahangir-069468166/' target="_blank">
+          <AiFillLinkedin size={30} />
           </a>
-             */}
+            
         </div>
 
         <div className="themes">  
@@ -41,8 +43,10 @@ const Footer = () => {
                 options={themeOptions}
                 onChange={handleThemeChange}
                 menuPlacement='top'
+                sty
                 defaultValue={{value:defaultTheme, label: defaultTheme.label}}
                 styles={{
+                  
                   control:  styles => ({...styles, backgroundColor: theme.background}),
                   menu: styles => ({...styles, backgroundColor: theme.background}),
                   option: (styles, {isFocused}) => {
